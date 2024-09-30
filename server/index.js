@@ -65,10 +65,11 @@ io.on('connection',async(socket)=>{
         
     })
     // leave room
-    socket.on("leave-room",(room)=>{
+    socket.on("leave-room",(room,socketId)=>{
         socket.leave(room)
         console.log(">>>>>>room leaved",room);
-        io.to(room).emit('user-left',room)
+        io.to(room).emit('user-left',socketId)
+        
     })
     
 })
