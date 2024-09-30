@@ -68,8 +68,9 @@ io.on('connection',async(socket)=>{
     socket.on("leave-room",(room)=>{
         socket.leave(room)
         console.log(">>>>>>room leaved",room);
-        
+        io.to(room).emit('user-left',room)
     })
+    
 })
 
 
