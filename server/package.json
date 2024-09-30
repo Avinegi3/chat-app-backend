@@ -2,12 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "description": "chat app using react and socket",
-  "main": "app.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":  "nodemon app.js",
-    "start": "node app.js"
+    "dev":  "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Avi",
   "license": "ISC",
