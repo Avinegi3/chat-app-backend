@@ -61,6 +61,7 @@ io.on('connection',async(socket)=>{
     //joining a room
     socket.on("join-room",(room)=>{
         socket.join(room)
+        io.to(room).emit('user-joined')
         console.log(">>>>>>room joined",room);
         
     })
